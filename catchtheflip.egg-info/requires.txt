@@ -1,0 +1,14 @@
+dynamiqs==0.3.7
+jax>=0.4.30
+numpy>=2.0
+scipy>=1.11
+matplotlib>=3.8
+
+[aqora]
+aqora[pyarrow]>=0.39
+
+[dev]
+pytest>=8
+marimo>=0.25
+nbformat
+scikit-learn

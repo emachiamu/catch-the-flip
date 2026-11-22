@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "catchtheflip"
+version = "0.2.0"
+description = "Helper package for the Alice & Bob 'Catch the flip' hackathon challenge (heralded bit flips of a dissipative cat qubit)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "dynamiqs==0.3.7",
+    "jax>=0.4.30",
+    "numpy>=2.0",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "marimo>=0.25", "nbformat", "scikit-learn"]
+aqora = ["aqora[pyarrow]>=0.39"]  # to read the datasets from Aqora and to save a file for the leaderboard
+
+[tool.setuptools.packages.find]
+include = ["catchtheflip*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
